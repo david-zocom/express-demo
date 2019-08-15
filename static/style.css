@@ -1,0 +1,24 @@
+body {
+	padding: 1em;
+	margin: 0;
+	background-color: #FBEFFB;
+}
+h1 {
+	color: #610B5E;
+}
+p {
+	color: #B404AE;
+}
+h1, p {
+	padding: 0.2rem 1rem;
+	transition: 1s all;
+}
+h1:hover, p:hover {
+	/* text-decoration: underline; */
+	background-color: #FA58F4;
+	color: black;
+	cursor: help;
+}
+body > :last-child:hover::after {
+	content: '🦄';
+}

@@ -37,6 +37,13 @@ server.get('/api/recipe/', (request, response) => {
 	}
 })
 
+server.post('/api/recipe/', (request, response) => {
+	let title = request.query.title;
+	let author = request.query.author;
+	data.push({ title, author });
+})
+
+
 server.get('/demo1', (req, res) => {
 	res.send('Request to /demo1');
 })

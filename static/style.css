@@ -1,10 +1,38 @@
 body {
 	padding: 1em;
-	margin: 0;
-	background-color: #FBEFFB;
+	margin: 0 auto;
+	background-image:url("https://cdn.shopify.com/s/files/1/1365/2497/products/Rainbow-unicorn-mask_900x.png?v=1553633323");
+	width: 400px;
 }
+input, button {
+	width: calc(100% - 2em - 2px);
+	padding: 1em;
+	border: 1px solid hotpink;
+	border-radius: 8px;
+	margin: 0.3em 0 0.5em 0;
+}
+button {
+	width: 100%;
+	color: #fff;
+	background-color: hotpink;
+}
+button:hover {
+	cursor: pointer;
+	color: #000;
+	background-color: #FBEFFB;
+	border: 1px solid hotpink;
+}
+button::before, button::after, h1::before, h1::after {
+	content: ' 🦄 ';
+}
+/* body * {
+	background: url('https://i.stack.imgur.com/q3yzN.gif') no-repeat center top;
+} */
 h1 {
+	text-align: center;
 	color: #610B5E;
+	background: url('https://i.stack.imgur.com/q3yzN.gif') no-repeat center bottom;
+	padding-bottom: 30px;
 }
 p {
 	color: #B404AE;
@@ -20,5 +48,5 @@ h1:hover, p:hover {
 	cursor: help;
 }
 body > :last-child:hover::after {
-	content: '🦄';
+	content: ' 🦄 ';
 }

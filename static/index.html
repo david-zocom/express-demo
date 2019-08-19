@@ -4,12 +4,20 @@
 	<meta charset="utf-8">
 	<title>Express delivery</title>
 	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" charset="utf-8"></script>
 </head>
 <body>
 	<h1>Welcome</h1>
 	<p>
 		This is an HTML page that the server <em>serves</em> to the client.
 	</p>
+	<div class="">
+		Title: <input type="text" id="title" value="" />
+	</div>
+	<div class="">
+		Author: <input type="text" id="author" value="" />
+	</div>
+	<button type="button" id="postRecipeButton">Add new recipe</button>
 	<p>
 		HTML, CSS and image files should be treated as <em>static</em> files - send them using <code>sendFile</code>. <br/>
 		Use <code>send</code> for API endpoints.

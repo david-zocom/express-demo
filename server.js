@@ -4,6 +4,11 @@
 const express = require('express');
 const server = express();
 
+server.use((request, response, next) => {
+	console.log('Logger:', request.url, request.method);
+	next();
+})
+
 server.use( express.static(__dirname + '/static/') );
 
 // server.get('/', (request, response) => {
@@ -55,6 +60,16 @@ server.get('/demo2/hej2', (req, res) => {
 })
 server.get('/demo2/:x', (req, res) => {
 	res.send('Request to /demo2/:x with parameter ' + JSON.stringify(req.params));
+})
+
+server.get('/error', (req, res) => {
+	throw Error('User error');
+})
+
+server.use((error, request, response, next) => {
+	console.log('An internal error occurred.', error);
+	response.status(500)
+		.send('505: An internal error occurred. Try again later and reboot your computer.');
 })
 
 

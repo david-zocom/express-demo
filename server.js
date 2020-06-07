@@ -73,7 +73,7 @@ server.use((error, request, response, next) => {
 })
 
 
-const port = 2048;
+const port = process.env.PORT || 2048;
 server.listen(port, () => {
 	console.log('Server is listening on port ' + port);
 })
